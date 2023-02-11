@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages="com.luv2code.springsecurity.demo.config")
+@ComponentScan(basePackages="com.luv2code.springsecurity.demo")
 public class DemoAppConfig {
 
 	// define a bean for ViewResolver
@@ -19,8 +19,8 @@ public class DemoAppConfig {
 		
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		
-		viewResolver.setPrefix("/WEB-IFM/view/");
-		viewResolver.setPrefix(".jsp");
+		viewResolver.setPrefix("/WEB-INF/view/");
+		viewResolver.setSuffix(".jsp");
 		
 		return viewResolver;
 		
